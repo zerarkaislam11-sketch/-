@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لعبة إسلام الثقافية</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="badge">لعبة تعليمية مسلية</p>
+          <h1>لعبة إسلام الثقافية</h1>
+          <p class="subtitle">
+            اختبر معلوماتك في التاريخ والجغرافيا والعلوم والفنون عبر نظام رتب متدرج مع ثلاث جولات في كل مرحلة.
+          </p>
+          <div class="actions">
+            <button id="startBtn" class="primary">ابدأ الآن</button>
+            <button id="ranksBtn" class="ghost">استعراض الرتب</button>
+          </div>
+          <div class="stats">
+            <div>
+              <span id="score">0</span>
+              <span>النقاط</span>
+            </div>
+            <div>
+              <span id="rankLabel">رتبة البداية</span>
+              <span>الرتبة الحالية</span>
+            </div>
+            <div>
+              <span id="stageLabel">مرحلة 1</span>
+              <span>المرحلة الحالية</span>
+            </div>
+          </div>
+        </div>
+        <div class="character" aria-hidden="true">
+          <div class="character-body"></div>
+          <div class="speech">لنبدأ رحلة المعرفة!</div>
+        </div>
+      </header>
+
+      <main>
+        <section id="ranksSection" class="panel hidden">
+          <h2>نظام الرتب</h2>
+          <div class="ranks-grid" id="ranksGrid"></div>
+        </section>
+
+        <section id="stageSection" class="panel hidden">
+          <div class="stage-header">
+            <div>
+              <h2 id="stageTitle">المرحلة 1</h2>
+              <p id="roundLabel">الجولة 1 من 3</p>
+            </div>
+            <div class="assist">
+              <button id="hintBtn" class="ghost">استخدم تلميح</button>
+              <span id="hintsLeft">تلميحات متبقية: 2</span>
+            </div>
+          </div>
+
+          <div class="question-card">
+            <span id="category" class="chip">التاريخ</span>
+            <h3 id="questionText">اضغط ابدأ لعرض أول سؤال.</h3>
+            <div id="choices" class="choices"></div>
+            <p id="feedback" class="feedback"></p>
+          </div>
+
+          <div class="progress">
+            <span id="roundProgress">0 / 3</span>
+            <button id="nextBtn" class="primary" disabled>السؤال التالي</button>
+          </div>
+        </section>
+
+        <section id="summarySection" class="panel hidden">
+          <h2>تقييم الرتبة</h2>
+          <p id="summaryText"></p>
+          <div class="actions">
+            <button id="nextRankBtn" class="primary">الانتقال للرتبة التالية</button>
+            <button id="restartBtn" class="ghost">إعادة اللعب</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>مصممة بـ HTML و CSS و JavaScript لتجربة متكاملة على المتصفح.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
